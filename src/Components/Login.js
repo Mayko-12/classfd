@@ -7,7 +7,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post('http://localhost:5000/login', { username, password });
+    const response = await axios.post('https://classbk-4.onrender.com/login', { username, password });
     localStorage.setItem('token', response.data.token);
     alert('Login successful');
   };
